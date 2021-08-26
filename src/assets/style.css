@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Gaming";
+  src: url(./font/CCShake.otf);
+}
+
+.scene {
+  width: 50px;
+  height: 50px;
+  /* margin-top: 80px; */
+  perspective: 60px;
+}
+
+.cube {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform infinite;
+  transform: translateZ(-25px) ;
+}
+
+
+.cube__face {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+}
+
+
+.front  { 
+  transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateZ(25px);
+ }
+.right  { 
+  transform: rotateY( 90deg) rotateX(0deg) rotateZ(0deg)  translateZ(25px);
+ }
+.back   { 
+  transform: rotateY(180deg) rotateX(0deg) rotateZ(0deg)  translateZ(25px);
+ }
+.left   { 
+  transform: rotateY(-90deg) rotateX(0deg) rotateZ(0deg)  translateZ(25px);
+ }
+.top    { 
+  transform: rotateX( 90deg) rotateY(0deg) rotateZ(0deg)  translateZ(25px);
+ }
+.bottom { 
+  transform: rotateX(-90deg) rotateY(0deg) rotate(0deg)  translateZ(25px);
+ }
+
+
+body {
+  background: url("./images/bg.jpg");
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.character img {
+  filter: drop-shadow(-4px 6px 10px #00000048);
+  transition: 0.3s ease-in-out;
+}
+.character {
+  transition: 0.3s ease-in-out;
+  font-family: "Gaming";
+}
+.btn-datCuoc .datCuoc,
+.btn-datCuoc .giamCuoc,
+.resetGame {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.btn-datCuoc img.datCuoc:hover,
+.btn-datCuoc img.giamCuoc:hover,
+.resetGame:hover {
+  transform: scale(1.1);
+}
+.btn-datCuoc img.datCuoc:active,
+.btn-datCuoc img.giamCuoc:active,
+.resetGame:active {
+  transform: scale(1.2);
+}
+img.coin {
+  width: 37px;
+  height: 46px;
+  margin-right: 6px;
+}
+.resetGame_img {
+  width: 52px;
+  height: 46px;
+  margin-right: 10px;
+}
+.tongTien,
+.resetGame_text {
+  font-family: 'Gaming';
+  font-size: 43px;
+  color: #313131;
+}
+
+.the-dice::before {
+  content: "";
+  background: url(./images/the-plate.png);
+  top: -35%;
+  left: 29%;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  background-size: cover;
+  width: 512px;
+  height: 512px;
+  filter: drop-shadow(-10px 12px 17px #00000070);
+}
+.logo-baucua, .character img,
+.the-dice::before,
+.the-dice
+ {
+  opacity: 1;
+  animation: bounceIn 0.6s ease;
+
+}
+@keyframes bounceIn {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.01, 1.01, 1.01);
+    transform: scale3d(1.01, 1.01, 1.01);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+img.lac-btn{
+	margin-left:-40px;
+}
+img.lac-btn:hover {
+	animation: shake 0.8s; 
+	cursor: pointer;
+	animation-iteration-count: infinite; 
+  }
+  
+  @keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff9239;
+  border: 1px solid #ff9239;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e97210;
+}
