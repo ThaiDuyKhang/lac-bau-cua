@@ -95,7 +95,7 @@ img.coin {
 .tongTien,
 .resetGame_text {
   font-family: 'Gaming';
-  font-size: 43px;
+  font-size: 36px;
   color: #313131;
 }
 
@@ -103,7 +103,7 @@ img.coin {
   content: "";
   background: url(./images/the-plate.png);
   top: -35%;
-  left: 29%;
+  left: 235px;
   margin-right: auto;
   margin-left: auto;
   position: absolute;
