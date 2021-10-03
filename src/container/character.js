@@ -9,7 +9,7 @@ export default function Character(props) {
   // console.log(character);
   return (
     <div className="mt-3 row">
-      <div style={{height:350}} 
+      <div style={{height:310}} 
       className="character col-12 align-items-center d-flex flex-column">
         <img src={character.hinhAnh} style={{ width: "80%" }} alt="" />
       <p className="mt-2" style={{ fontSize: "35px", fontWeight: "500", color: "#313131" }}>
